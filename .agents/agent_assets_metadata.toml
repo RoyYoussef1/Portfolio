@@ -1,0 +1,56 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "tyyq2MMqATB3B2wf6x9Eh"
+uri = "file://artifacts/portfolio/public/projects/riyadh.png"
+type = "image"
+title = "Abstract glowing tech visualization"
+
+[[generated]]
+id = "o5xi0bngZdSILvMqVBgHI"
+uri = "file://artifacts/portfolio/public/projects/redbull-oman.png"
+type = "image"
+title = "Abstract mobile telecom visualization"
+
+[[generated]]
+id = "jAZoBFSu52yk5OMzbuN3u"
+uri = "file://artifacts/portfolio/public/projects/redbull-ksa.png"
+type = "image"
+title = "Abstract energy tech visualization"
+
+[[generated]]
+id = "yz7CbXTCR6o24dVeH5_aV"
+uri = "file://artifacts/portfolio/public/projects/mozart.png"
+type = "image"
+title = "Abstract acoustic tech visualization"
+
+[[generated]]
+id = "skL8S3jdTt0LUWt8wsbLA"
+uri = "file://artifacts/portfolio/public/projects/santafoo.png"
+type = "image"
+title = "Abstract delivery grid visualization"
+
+[[generated]]
+id = "M1TELNiU6C463llR98aoX"
+uri = "file://artifacts/portfolio/public/projects/interesting.png"
+type = "image"
+title = "Abstract creative tech visualization"
+
+[[generated]]
+id = "OOsxyBOyvoftGqXoN1TDh"
+uri = "file://artifacts/portfolio/public/projects/wtfalafel.png"
+type = "image"
+title = "Abstract organic tech visualization"
+
+[[generated]]
+id = "VV4CTwubn6aobuqRXIZ7U"
+uri = "file://artifacts/portfolio/public/projects/qinwan.png"
+type = "image"
+title = "Abstract luxury tech visualization"
+
+[[generated]]
+id = "UK5zu36s08nONA03YBa21"
+uri = "file://artifacts/portfolio/public/projects/solar.png"
+type = "image"
+title = "Abstract solar energy visualization"
