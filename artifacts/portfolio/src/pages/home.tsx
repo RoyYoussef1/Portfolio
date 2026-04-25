@@ -2,8 +2,9 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Terminal, Code2, Cpu } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 import { projects } from "@/data/projects";
+import { TechStack } from "@/components/TechStack";
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
@@ -131,34 +132,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Expertise Quick Look */}
-        <section className="py-20 border-t border-white/5">
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-             <div>
-               <h2 className="text-3xl font-bold mb-6">Technical Core</h2>
-               <p className="text-muted-foreground mb-8">
-                 Building modern applications requires a solid foundation in both frontend and backend architectures. I specialize in the React ecosystem while maintaining deep roots in server-side technologies.
-               </p>
-               <Link href="/about">
-                 <div className="inline-flex items-center gap-2 text-primary font-mono hover:underline cursor-pointer">
-                   [Explore full skill matrix] <ArrowRight className="w-4 h-4" />
-                 </div>
-               </Link>
-             </div>
-             <div className="grid grid-cols-2 gap-4">
-               <div className="glass-panel p-6 rounded-xl border border-white/5">
-                 <Code2 className="w-8 h-8 text-primary mb-4" />
-                 <h3 className="font-semibold mb-2">Frontend</h3>
-                 <p className="text-sm text-muted-foreground font-mono">React, Next.js, TS</p>
-               </div>
-               <div className="glass-panel p-6 rounded-xl border border-white/5">
-                 <Cpu className="w-8 h-8 text-secondary mb-4" />
-                 <h3 className="font-semibold mb-2">Backend</h3>
-                 <p className="text-sm text-muted-foreground font-mono">Node, Express, MySQL</p>
-               </div>
-             </div>
-           </div>
-        </section>
+        {/* Tech Stack */}
+        <TechStack />
+
+        <div className="pb-20 -mt-8 flex justify-center">
+          <Link href="/about">
+            <div
+              className="inline-flex items-center gap-2 text-primary font-mono hover:underline cursor-pointer"
+              data-testid="link-full-skill-matrix"
+            >
+              [Explore full skill matrix] <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
+        </div>
 
       </div>
     </>
