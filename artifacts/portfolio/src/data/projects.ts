@@ -1,3 +1,11 @@
+export type ProjectTag =
+  | 'eCommerce'
+  | 'Corporate'
+  | 'Restaurant'
+  | 'Telecom'
+  | 'Government'
+  | 'Web App';
+
 export type Project = {
   slug: string;
   title: string;
@@ -5,6 +13,7 @@ export type Project = {
   category: 'website' | 'app';
   description: string;
   tech: string[];
+  tags: ProjectTag[];
   coverImage: string;
   year?: string;
 };
@@ -17,6 +26,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A scalable, high-performance platform for the official Riyadh Municipality, built with modern web standards.',
     tech: ['Next.js', 'React', 'TypeScript', 'Strapi'],
+    tags: ['Government', 'Corporate'],
     coverImage: '/projects/riyadh.png',
   },
   {
@@ -26,6 +36,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'An engaging mobile telecommunications portal crafted for Red Bull MEA audience in Oman.',
     tech: ['WordPress', 'WooCommerce', 'Custom Theming'],
+    tags: ['Telecom', 'eCommerce'],
     coverImage: '/projects/redbull-oman.png',
   },
   {
@@ -35,6 +46,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A seamless, high-energy digital experience for Red Bull Mobile users in Saudi Arabia.',
     tech: ['WordPress', 'WooCommerce', 'Custom Theming'],
+    tags: ['Telecom', 'eCommerce'],
     coverImage: '/projects/redbull-ksa.png',
   },
   {
@@ -44,6 +56,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'An elegant showcase and eCommerce platform for a renowned music academy and store.',
     tech: ['WordPress', 'Custom Theme'],
+    tags: ['eCommerce', 'Corporate'],
     coverImage: '/projects/mozart.png',
   },
   {
@@ -53,6 +66,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A dynamic eCommerce experience delivering fresh culinary offerings to users in France.',
     tech: ['WordPress', 'eCommerce'],
+    tags: ['Restaurant', 'eCommerce'],
     coverImage: '/projects/santafoo.png',
   },
   {
@@ -62,6 +76,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A progressive, visually striking agency website maximizing modern web development capabilities.',
     tech: ['WordPress'],
+    tags: ['Corporate'],
     coverImage: '/projects/interesting.png',
   },
   {
@@ -71,6 +86,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A vibrant food brand website with integrated ordering and engaging UI.',
     tech: ['WordPress', 'WooCommerce'],
+    tags: ['Restaurant', 'eCommerce'],
     coverImage: '/projects/wtfalafel.png',
   },
   {
@@ -80,6 +96,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'A premium eCommerce store for luxury dates, built for seamless conversions and elegant browsing.',
     tech: ['Shopify'],
+    tags: ['eCommerce'],
     coverImage: '/projects/qinwan.png',
   },
   {
@@ -89,6 +106,7 @@ export const projects: Project[] = [
     category: 'website',
     description: 'An interactive university web app project demonstrating fundamental software engineering principles.',
     tech: ['Web App'],
+    tags: ['Web App'],
     coverImage: '/projects/solar.png',
   },
 ];

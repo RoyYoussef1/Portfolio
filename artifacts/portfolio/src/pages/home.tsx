@@ -113,19 +113,7 @@ export default function Home() {
                 <div className="p-6 relative">
                   <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.slice(0, 3).map(t => (
-                      <span key={t} className="text-xs font-mono px-2 py-1 rounded bg-white/5 border border-white/10 text-muted-foreground">
-                        {t}
-                      </span>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <span className="text-xs font-mono px-2 py-1 rounded bg-white/5 border border-white/10 text-muted-foreground">
-                        +{project.tech.length - 3}
-                      </span>
-                    )}
-                  </div>
+                  <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
                 </div>
               </motion.a>
             ))}
