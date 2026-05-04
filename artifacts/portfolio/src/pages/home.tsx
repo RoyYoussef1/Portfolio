@@ -2,7 +2,7 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Terminal, Globe, Smartphone, Palette, Download, MapPin, Zap } from "lucide-react";
+import { ArrowRight, Globe, Smartphone, Palette, Download } from "lucide-react";
 import { projects } from "@/data/projects";
 import { TechStack } from "@/components/TechStack";
 
@@ -82,78 +82,108 @@ export default function Home() {
             }}
           />
 
-          {/* Content */}
-          <div className="max-w-3xl relative z-10">
-            {/* Location badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-muted-foreground text-xs font-mono mb-8"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <MapPin className="w-3 h-3" />
-              <span>Beirut, Lebanon</span>
-              <span className="mx-1 opacity-30">|</span>
-              <Zap className="w-3 h-3 text-primary" />
-              <span className="text-primary">Available for work</span>
-            </motion.div>
+          {/* Two-column layout */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight mb-4 leading-[1.1]"
-            >
-              Roy Youssef.
-            </motion.h1>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.18 }}
-              className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-tight text-muted-foreground/70"
-            >
-              Software <span className="text-gradient">Engineer</span> &amp; Digital Architect.
-            </motion.h2>
-
-            {/* Stats row */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.28 }}
-              className="flex flex-wrap gap-x-8 gap-y-4 mb-10"
-            >
-              {STATS.map(({ value, label }) => (
-                <div key={label} className="flex flex-col">
-                  <span className="text-2xl md:text-3xl font-bold text-primary font-mono leading-none">{value}</span>
-                  <span className="text-xs text-muted-foreground mt-1 font-mono uppercase tracking-wider">{label}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* CTA buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.38 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link href="/projects">
-                <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
-                  View Systems
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-              <a
-                href="/cv.pdf"
-                download
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/10 glass-panel text-foreground font-semibold hover:bg-white/5 hover:border-white/20 transition-all cursor-pointer group"
+            {/* Left — text */}
+            <div className="flex-1 min-w-0">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.05 }}
+                className="text-5xl md:text-7xl font-bold tracking-tight mb-4 leading-[1.1]"
               >
-                <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                Download CV
-              </a>
+                Roy Youssef.
+              </motion.h1>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.14 }}
+                className="text-2xl md:text-4xl font-bold tracking-tight mb-10 leading-tight text-muted-foreground/70"
+              >
+                Software <span className="text-gradient">Engineer</span> &amp; Digital Architect.
+              </motion.h2>
+
+              {/* Stats row */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.24 }}
+                className="flex flex-wrap gap-x-8 gap-y-4 mb-10"
+              >
+                {STATS.map(({ value, label }) => (
+                  <div key={label} className="flex flex-col">
+                    <span className="text-2xl md:text-3xl font-bold text-primary font-mono leading-none">{value}</span>
+                    <span className="text-xs text-muted-foreground mt-1 font-mono uppercase tracking-wider">{label}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.34 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Link href="/projects">
+                  <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
+                    View Systems
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+                <a
+                  href="/cv.pdf"
+                  download
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/10 glass-panel text-foreground font-semibold hover:bg-white/5 hover:border-white/20 transition-all cursor-pointer group"
+                >
+                  <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                  Download CV
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Right — avatar */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              className="relative flex-shrink-0 w-72 h-72 md:w-96 md:h-96"
+            >
+              {/* Outer rotating ring */}
+              <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_3px_rgba(0,240,255,0.7)]" />
+              </div>
+              {/* Inner counter-rotating ring */}
+              <div className="absolute inset-4 rounded-full border border-secondary/15 animate-[spin_14s_linear_infinite_reverse]">
+                <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_2px_rgba(160,0,255,0.6)]" />
+              </div>
+
+              {/* Glow behind image */}
+              <div className="absolute inset-8 rounded-full bg-primary/10 blur-2xl" />
+              <div className="absolute inset-12 rounded-full bg-secondary/10 blur-2xl" />
+
+              {/* Image container */}
+              <div className="absolute inset-6 rounded-full overflow-hidden border border-white/10"
+                style={{
+                  boxShadow: '0 0 40px -8px rgba(0,240,255,0.3), 0 0 80px -20px rgba(140,0,220,0.2)',
+                }}
+              >
+                <img
+                  src="/roy.png"
+                  alt="Roy Youssef"
+                  className="w-full h-full object-cover object-top"
+                />
+                {/* Subtle inner gradient overlay */}
+                <div className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(ellipse at bottom, rgba(0,0,0,0.3) 0%, transparent 60%)',
+                  }}
+                />
+              </div>
             </motion.div>
+
           </div>
 
           {/* Scrolling marquee */}
