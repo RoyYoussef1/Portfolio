@@ -60,7 +60,7 @@ export const education = [
 ];
 
 export const languages = [
-  { language: 'English', proficiency: 'Full Professional Proficiency' },
-  { language: 'Arabic', proficiency: 'Native or Bilingual Proficiency' },
-  { language: 'French', proficiency: 'Professional Working Proficiency' },
+  { flag: '🇬🇧', language: 'English', proficiency: 'Full Professional Proficiency' },
+  { flag: '🇱🇧', language: 'Arabic', proficiency: 'Native or Bilingual Proficiency' },
+  { flag: '🇫🇷', language: 'French', proficiency: 'Professional Working Proficiency' },
 ];

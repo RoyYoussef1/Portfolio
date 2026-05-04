@@ -126,11 +126,14 @@ export default function About() {
               <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
                 <span className="text-primary font-mono text-sm">05.</span> Languages
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {languages.map(lang => (
-                  <div key={lang.language} className="glass-panel p-4 rounded-lg border border-white/5 flex justify-between items-center">
-                    <span className="font-semibold">{lang.language}</span>
-                    <span className="text-xs text-muted-foreground font-mono">{lang.proficiency}</span>
+                  <div key={lang.language} className="glass-panel px-5 py-4 rounded-lg border border-white/5 flex items-center gap-4">
+                    <span className="text-2xl leading-none flex-shrink-0">{lang.flag}</span>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-base leading-snug">{lang.language}</p>
+                      <p className="text-xs text-muted-foreground font-mono mt-0.5">{lang.proficiency}</p>
+                    </div>
                   </div>
                 ))}
               </div>
