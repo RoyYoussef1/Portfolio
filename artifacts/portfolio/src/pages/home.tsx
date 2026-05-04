@@ -7,16 +7,9 @@ import { projects } from "@/data/projects";
 import { TechStack } from "@/components/TechStack";
 
 const STATS = [
-  { value: '37+', label: 'Projects Shipped' },
+  { value: '40+', label: 'Projects Shipped' },
   { value: '5+', label: 'Years Building' },
   { value: '12+', label: 'Countries Reached' },
-  { value: '100%', label: 'Client Retention' },
-];
-
-const MARQUEE_ITEMS = [
-  'React', 'Next.js', 'TypeScript', 'Node.js', 'WordPress', 'Shopify',
-  'React Native', 'Expo', 'Figma', 'Tailwind CSS', 'PostgreSQL', 'Strapi',
-  'WooCommerce', 'GraphQL', 'Framer Motion', 'AWS',
 ];
 
 const SERVICES = [
@@ -129,7 +122,7 @@ export default function Home() {
               >
                 <Link href="/projects">
                   <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
-                    View Systems
+                    View Projects
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
@@ -186,22 +179,6 @@ export default function Home() {
 
           </div>
 
-          {/* Scrolling marquee */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="absolute bottom-10 left-0 right-0 overflow-hidden pointer-events-none"
-          >
-            <div className="flex gap-8 animate-[marquee_30s_linear_infinite] whitespace-nowrap w-max">
-              {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
-                <span key={i} className="text-xs font-mono text-muted-foreground/30 uppercase tracking-widest">
-                  {item}
-                  <span className="ml-8 text-primary/20">·</span>
-                </span>
-              ))}
-            </div>
-          </motion.div>
         </section>
 
         {/* Services */}
