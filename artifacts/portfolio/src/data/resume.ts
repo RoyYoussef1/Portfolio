@@ -60,7 +60,7 @@ export const education = [
 ];
 
 export const languages = [
-  { flag: '🇬🇧', language: 'English', proficiency: 'Full Professional Proficiency' },
-  { flag: '🇱🇧', language: 'Arabic', proficiency: 'Native or Bilingual Proficiency' },
-  { flag: '🇫🇷', language: 'French', proficiency: 'Professional Working Proficiency' },
+  { flag: 'https://flagcdn.com/gb.svg', language: 'English', proficiency: 'Full Professional Proficiency' },
+  { flag: 'https://flagcdn.com/lb.svg', language: 'Arabic', proficiency: 'Native or Bilingual Proficiency' },
+  { flag: 'https://flagcdn.com/fr.svg', language: 'French', proficiency: 'Professional Working Proficiency' },
 ];

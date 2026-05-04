@@ -129,7 +129,7 @@ export default function About() {
               <div className="space-y-3">
                 {languages.map(lang => (
                   <div key={lang.language} className="glass-panel px-5 py-4 rounded-lg border border-white/5 flex items-center gap-4">
-                    <span className="text-2xl leading-none flex-shrink-0">{lang.flag}</span>
+                    <img src={lang.flag} alt={lang.language} className="w-8 h-6 object-cover rounded-sm flex-shrink-0 shadow-sm" />
                     <div className="min-w-0">
                       <p className="font-semibold text-base leading-snug">{lang.language}</p>
                       <p className="text-xs text-muted-foreground font-mono mt-0.5">{lang.proficiency}</p>
