@@ -12,6 +12,7 @@ import About from "@/pages/about";
 import Projects from "@/pages/projects";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import ScrollToTop from "./components/ui/scrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function Router() {
     <div className="flex flex-col min-h-screen relative">
       <div className="fixed inset-0 z-[-1] bg-background bg-grid-pattern opacity-50" />
       <div className="fixed inset-0 z-[-1] bg-[radial-gradient(circle_at_50%_-20%,hsl(var(--primary)/0.15),transparent_50%)]" />
-      
+      <ScrollToTop />
       <Navbar />
       
       <main className="flex-1 pt-20">
