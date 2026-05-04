@@ -50,16 +50,6 @@ export const projects: Project[] = [
     coverImage: '/projects/redbull-ksa.png',
   },
   {
-    slug: 'mozart-chahine',
-    title: 'Mozart Chahine',
-    url: 'https://mozartchahine.com/',
-    category: 'website',
-    description: 'An elegant showcase and eCommerce platform for a renowned music academy and store.',
-    tech: ['WordPress', 'Custom Theme'],
-    tags: ['eCommerce', 'Corporate'],
-    coverImage: '/projects/mozart.png',
-  },
-  {
     slug: 'santafoo',
     title: 'Santafoo',
     url: 'https://santafoo.fr/',
