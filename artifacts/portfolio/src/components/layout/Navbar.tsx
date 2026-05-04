@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Home, User, Layers, Mail, Briefcase } from "lucide-react";
+import { Home, User, Layers, Mail, Github, Linkedin } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/",         label: "Home",     Icon: Home },
@@ -24,15 +24,8 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
 
-        {/* Logo */}
-        <Link href="/">
-          <div className="pointer-events-auto flex items-center gap-2 cursor-pointer group">
-            <div className="w-8 h-8 rounded bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-colors">
-              <span className="font-mono font-bold text-primary text-sm">RY</span>
-            </div>
-            <span className="font-semibold text-base tracking-wide hidden sm:block">Roy Youssef</span>
-          </div>
-        </Link>
+        {/* Left spacer — keeps pill centered */}
+        <div className="w-24 hidden md:block" />
 
         {/* Centered pill nav */}
         <nav
@@ -62,7 +55,6 @@ export function Navbar() {
                     }`}
                   >
                     <Icon className="w-4 h-4 flex-shrink-0" />
-                    {/* Label: visible on md+, hidden on mobile */}
                     <span className="hidden md:inline">{label}</span>
                   </div>
                 </div>
@@ -71,16 +63,21 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Hire Me — desktop only */}
-        <Link href="/contact">
-          <div className="pointer-events-auto hidden md:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium hover:bg-primary/10 transition-colors cursor-pointer">
-            <Briefcase className="w-4 h-4" />
-            Hire Me
-          </div>
-        </Link>
-
-        {/* Mobile right spacer to balance logo */}
-        <div className="w-8 md:hidden" />
+        {/* Right — social icons */}
+        <div className="pointer-events-auto flex items-center gap-4">
+          <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            <Github className="w-5 h-5" />
+          </a>
+          <a href="https://linkedin.com/in/roy-youssef-097a47252" target="_blank" rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a href="mailto:roy.b.youssef@gmail.com"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            <Mail className="w-5 h-5" />
+          </a>
+        </div>
 
       </div>
     </header>
