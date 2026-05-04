@@ -82,13 +82,12 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Systems & Architecture.
+          <p className="text-xs font-mono text-primary tracking-widest uppercase mb-4">Selected Work</p>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
+            Projects.
           </h1>
-          <div className="w-20 h-1 bg-primary mb-8" />
-          <p className="text-muted-foreground max-w-2xl text-lg">
-            A curated selection of digital platforms, e-commerce systems, and
-            applications I've engineered for clients and companies globally.
+          <p className="text-muted-foreground max-w-xl text-base leading-relaxed">
+            Digital platforms, e-commerce systems, and applications engineered for clients globally.
           </p>
         </motion.div>
 
@@ -279,7 +278,7 @@ type TagChipProps = {
   testId: string;
 };
 
-function TagChip({ active, onClick, Icon, label, count, testId }: TagChipProps) {
+function TagChip({ active, onClick, Icon, label, testId }: Omit<TagChipProps, 'count'>) {
   return (
     <button
       onClick={onClick}
@@ -292,15 +291,6 @@ function TagChip({ active, onClick, Icon, label, count, testId }: TagChipProps) 
     >
       <Icon className="w-3.5 h-3.5" />
       <span>{label}</span>
-      <span
-        className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
-          active
-            ? 'bg-primary/20 text-primary'
-            : 'bg-white/5 text-muted-foreground/70'
-        }`}
-      >
-        {count}
-      </span>
     </button>
   );
 }
