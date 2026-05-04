@@ -66,29 +66,21 @@ export default function Home() {
         {/* Hero Section */}
         <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
 
-          {/* Background grid */}
-          <div className="absolute inset-0 pointer-events-none"
+          {/* Smooth ambient glow — centered, bleeds into page seamlessly */}
+          <div
+            className="absolute inset-0 pointer-events-none"
             style={{
-              backgroundImage: 'linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px)',
-              backgroundSize: '60px 60px',
+              background:
+                'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,180,200,0.07) 0%, rgba(0,100,140,0.04) 40%, transparent 70%)',
             }}
           />
-
-          {/* Radial glow blobs */}
-          <div className="absolute -right-40 top-1/4 w-[700px] h-[700px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
-          <div className="absolute -right-20 top-1/3 w-[400px] h-[400px] rounded-full bg-secondary/8 blur-[100px] pointer-events-none" />
-
-          {/* Rotating rings — tighter to right edge */}
-          <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-[560px] h-[560px] pointer-events-none hidden lg:block">
-            <div className="absolute inset-0 border border-primary/15 rounded-full animate-[spin_80s_linear_infinite]" />
-            <div className="absolute inset-[12%] border border-secondary/15 rounded-full animate-[spin_50s_linear_infinite_reverse]" />
-            <div className="absolute inset-[24%] border border-primary/10 rounded-full animate-[spin_35s_linear_infinite]" />
-            <div className="absolute inset-[38%] border border-white/5 rounded-full animate-[spin_20s_linear_infinite_reverse]" />
-            {/* Dot on outer ring */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_2px_rgba(0,240,255,0.6)]" />
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_2px_rgba(180,0,255,0.5)]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/20 rounded-full blur-[60px]" />
-          </div>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(ellipse 50% 50% at 75% 55%, rgba(140,0,220,0.05) 0%, transparent 60%)',
+            }}
+          />
 
           {/* Content */}
           <div className="max-w-3xl relative z-10">
