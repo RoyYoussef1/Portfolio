@@ -2,9 +2,22 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Terminal, Globe, Smartphone, Palette } from "lucide-react";
+import { ArrowRight, Terminal, Globe, Smartphone, Palette, Download, MapPin, Zap } from "lucide-react";
 import { projects } from "@/data/projects";
 import { TechStack } from "@/components/TechStack";
+
+const STATS = [
+  { value: '37+', label: 'Projects Shipped' },
+  { value: '5+', label: 'Years Building' },
+  { value: '12+', label: 'Countries Reached' },
+  { value: '100%', label: 'Client Retention' },
+];
+
+const MARQUEE_ITEMS = [
+  'React', 'Next.js', 'TypeScript', 'Node.js', 'WordPress', 'Shopify',
+  'React Native', 'Expo', 'Figma', 'Tailwind CSS', 'PostgreSQL', 'Strapi',
+  'WooCommerce', 'GraphQL', 'Framer Motion', 'AWS',
+];
 
 const SERVICES = [
   {
@@ -51,64 +64,122 @@ export default function Home() {
       
       <div className="container mx-auto px-6">
         {/* Hero Section */}
-        <section className="min-h-[80vh] flex flex-col justify-center relative">
-          <div className="max-w-4xl relative z-10">
+        <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+
+          {/* Background grid */}
+          <div className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: 'linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
+
+          {/* Radial glow blobs */}
+          <div className="absolute -right-40 top-1/4 w-[700px] h-[700px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+          <div className="absolute -right-20 top-1/3 w-[400px] h-[400px] rounded-full bg-secondary/8 blur-[100px] pointer-events-none" />
+
+          {/* Rotating rings — tighter to right edge */}
+          <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-[560px] h-[560px] pointer-events-none hidden lg:block">
+            <div className="absolute inset-0 border border-primary/15 rounded-full animate-[spin_80s_linear_infinite]" />
+            <div className="absolute inset-[12%] border border-secondary/15 rounded-full animate-[spin_50s_linear_infinite_reverse]" />
+            <div className="absolute inset-[24%] border border-primary/10 rounded-full animate-[spin_35s_linear_infinite]" />
+            <div className="absolute inset-[38%] border border-white/5 rounded-full animate-[spin_20s_linear_infinite_reverse]" />
+            {/* Dot on outer ring */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_2px_rgba(0,240,255,0.6)]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_2px_rgba(180,0,255,0.5)]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/20 rounded-full blur-[60px]" />
+          </div>
+
+          {/* Content */}
+          <div className="max-w-3xl relative z-10">
+            {/* Location badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-mono mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-muted-foreground text-xs font-mono mb-8"
             >
-              <Terminal className="w-4 h-4" />
-              <span>System initialized.</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <MapPin className="w-3 h-3" />
+              <span>Beirut, Lebanon</span>
+              <span className="mx-1 opacity-30">|</span>
+              <Zap className="w-3 h-3 text-primary" />
+              <span className="text-primary">Available for work</span>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-5xl md:text-7xl font-bold tracking-tight mb-4 leading-[1.1]"
             >
-              Engineering <span className="text-gradient">high-performance</span> digital realities.
+              Roy Youssef.
             </motion.h1>
-            
-            <motion.p
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.18 }}
+              className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-tight text-muted-foreground/70"
             >
-              I'm Roy Youssef, a Software Engineer based in Beirut. I combine deep technical precision with creative problem-solving to build scalable web applications and elegant digital experiences.
-            </motion.p>
-            
+              Software <span className="text-gradient">Engineer</span> &amp; Digital Architect.
+            </motion.h2>
+
+            {/* Stats row */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.28 }}
+              className="flex flex-wrap gap-x-8 gap-y-4 mb-10"
+            >
+              {STATS.map(({ value, label }) => (
+                <div key={label} className="flex flex-col">
+                  <span className="text-2xl md:text-3xl font-bold text-primary font-mono leading-none">{value}</span>
+                  <span className="text-xs text-muted-foreground mt-1 font-mono uppercase tracking-wider">{label}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* CTA buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.38 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link href="/projects">
-                <div className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
+                <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
                   View Systems
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-              <Link href="/contact">
-                <div className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/10 glass-panel text-foreground font-semibold hover:bg-white/5 transition-colors cursor-pointer">
-                  Initialize Contact
-                </div>
-              </Link>
+              <a
+                href="/cv.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/10 glass-panel text-foreground font-semibold hover:bg-white/5 hover:border-white/20 transition-all cursor-pointer group"
+              >
+                <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                Download CV
+              </a>
             </motion.div>
           </div>
-          
-          {/* Abstract Hero Graphic */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none hidden lg:block opacity-60">
-            <div className="absolute inset-0 border-[1px] border-primary/20 rounded-full animate-[spin_60s_linear_infinite]" />
-            <div className="absolute inset-[10%] border-[1px] border-secondary/20 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
-            <div className="absolute inset-[20%] border-[1px] border-primary/10 rounded-full animate-[spin_30s_linear_infinite]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/20 rounded-full blur-[100px]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/10 rounded-full blur-[120px]" />
-          </div>
+
+          {/* Scrolling marquee */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="absolute bottom-10 left-0 right-0 overflow-hidden pointer-events-none"
+          >
+            <div className="flex gap-8 animate-[marquee_30s_linear_infinite] whitespace-nowrap w-max">
+              {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
+                <span key={i} className="text-xs font-mono text-muted-foreground/30 uppercase tracking-widest">
+                  {item}
+                  <span className="ml-8 text-primary/20">·</span>
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </section>
 
         {/* Services */}
