@@ -22,12 +22,12 @@ export const projects: Project[] = [
   {
     slug: 'riyadh-municipality',
     title: 'Riyadh Municipality Official Website',
-    url: 'https://alriyad.gov.sa/',
+    url: 'https://alriyadh.gov.sa/',
     category: 'website',
     description: 'A scalable, high-performance platform for the official Riyadh Municipality, built with modern web standards.',
     tech: ['Next.js', 'React', 'TypeScript', 'Strapi'],
     tags: ['Government', 'Corporate'],
-    coverImage: '/projects/riyadh.png',
+    coverImage: '/projects/riyadh-muni.webp',
   },
   {
     slug: 'red-bull-mobile-oman',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
   {
     slug: 'solar-web',
     title: 'Solar Web',
-    url: 'https://bit.ly/my-solar-web',
+    url: 'https://bejewelled-boba-431440.netlify.app/',
     category: 'website',
     description: 'An interactive university web app project demonstrating fundamental software engineering principles.',
     tech: ['Web App'],
