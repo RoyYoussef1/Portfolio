@@ -179,7 +179,7 @@ export default function Projects() {
                     data-testid={`project-card-${project.slug}`}
                   >
                     <div className="aspect-[4/3] relative overflow-hidden bg-black/50">
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
                       <img
                         src={project.coverImage}
                         alt={project.title}
