@@ -70,11 +70,6 @@ export function TechStack() {
             The toolkit I build with.
           </h2>
         </div>
-        <p className="text-muted-foreground max-w-md text-sm md:text-base">
-          A focused stack covering the full path from interface to database —
-          honed across production work for governments, agencies, and global
-          brands.
-        </p>
       </div>
 
       <div
