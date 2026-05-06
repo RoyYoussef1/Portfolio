@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "A sharp creative agency presence built around motion, type, and a refined visual system.",
     tech: ["WordPress", "Custom Theme"],
     tags: ["Corporate"],
-    coverImage: "/projects/FLYSQUID-WHITE.png",
+    coverImage: "/projects/FLYSQUID-FINAL-LOGO-02-scaled.png",
   },
   {
     slug: "echahwan-tools",
