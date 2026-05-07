@@ -57,7 +57,7 @@ export default function Home() {
       
       <div className="container mx-auto px-6">
         {/* Hero Section */}
-        <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+        <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-4 md:pt-0">
 
           {/* Smooth ambient glow — centered, bleeds into page seamlessly */}
           <div
