@@ -29,7 +29,7 @@ export function Navbar() {
 
         {/* Centered pill nav */}
         <nav
-          className={`pointer-events-auto absolute left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-2 rounded-full border transition-all duration-300 ${
+          className={`pointer-events-auto absolute left-6 md:left-1/2 md:-translate-x-1/2 flex items-center gap-1 px-2 py-2 rounded-full border transition-all duration-300 ${
             scrolled
               ? "bg-background/70 backdrop-blur-xl border-white/10 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)]"
               : "bg-background/40 backdrop-blur-md border-white/8"
@@ -64,7 +64,7 @@ export function Navbar() {
         </nav>
 
         {/* Right — social icons */}
-        <div className="pointer-events-auto flex items-center gap-4">
+        <div className="pointer-events-auto flex items-center gap-4 w-full justify-end">
           <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="w-5 h-5" />
