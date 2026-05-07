@@ -121,13 +121,13 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link href="/projects">
-                  <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group">
+                  <div className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer group w-full">
                     View Projects
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
                 <a
-                  href="/cv.pdf"
+                  href="/Roy_Youssef_RESUME.pdf"
                   download
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/10 glass-panel text-foreground font-semibold hover:bg-white/5 hover:border-white/20 transition-all cursor-pointer group"
                 >
