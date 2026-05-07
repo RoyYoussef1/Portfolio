@@ -385,6 +385,17 @@ export const projects: Project[] = [
     coverImage: "/projects/hydra.jpg",
   },
   {
+    slug: "sconstruction-group",
+    title: "Smart Construction Group",
+    url: "https://sconstructiongroup.com/",
+    category: "website",
+    description:
+      "Smart Construction Group is a reowned construction company specializing in the construction of residential complexes and temporary construction facilities in Central Asia and the Middle East, as well as comprehensive equipment rental solutions.",
+    tech: ["WordPress", "Custom Theme"],
+    tags: ["Corporate"],
+    coverImage: "/projects/scon.jpg",
+  },
+  {
     slug: "neds-pizza-ny",
     title: "Ned's Pizza NY",
     url: "https://nedspizzany.com/",
