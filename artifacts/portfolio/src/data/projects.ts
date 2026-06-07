@@ -2,10 +2,11 @@ export type ProjectTag =
   | "eCommerce"
   | "Corporate"
   | "Restaurant"
-  | "Telecom"
   | "Government"
   | "Web App"
-  | "Kids";
+  | "Food & Beverage"
+  | "Kids"
+  | "Telecom";
 
 export type Project = {
   slug: string;
@@ -116,7 +117,7 @@ export const projects: Project[] = [
     description:
       "A premium eCommerce store for luxury dates, built for seamless conversions and elegant browsing.",
     tech: ["Shopify"],
-    tags: ["eCommerce"],
+    tags: ["eCommerce", "Food & Beverage"],
     coverImage: "/projects/qinwan.webp",
   },
   {
@@ -348,7 +349,7 @@ export const projects: Project[] = [
     description:
       "A wholesome food brand storefront with a warm, modern direct-to-consumer experience.",
     tech: ["Shopify", "Custom Theme"],
-    tags: ["eCommerce", "Restaurant"],
+    tags: ["eCommerce", "Food & Beverage"],
     coverImage: "/projects/justoats.webp",
   },
   {
@@ -359,7 +360,7 @@ export const projects: Project[] = [
     description:
       "A vibrant beverage brand eCommerce experience built around energetic visual storytelling.",
     tech: ["Shopify", "Custom Theme"],
-    tags: ["eCommerce"],
+    tags: ["eCommerce", "Food & Beverage"],
     coverImage: "/projects/sqooon.png",
   },
   {
@@ -470,7 +471,7 @@ export const projects: Project[] = [
     description:
       "A bakery and confectionery eCommerce experience tuned for cravings and conversions.",
     tech: ["Shopify", "Custom Theme"],
-    tags: ["eCommerce", "Restaurant"],
+    tags: ["eCommerce", "Food & Beverage"],
     coverImage: "/projects/pistachino.webp",
   },
 

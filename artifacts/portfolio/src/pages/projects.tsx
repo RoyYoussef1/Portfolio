@@ -21,10 +21,11 @@ const TAG_META: Record<ProjectTag, { label: string; Icon: LucideIcon }> = {
   eCommerce: { label: 'eCommerce', Icon: ShoppingBag },
   Corporate: { label: 'Corporate', Icon: Building2 },
   Restaurant: { label: 'Restaurant', Icon: UtensilsCrossed },
-  Telecom: { label: 'Telecom', Icon: Signal },
   Government: { label: 'Government', Icon: Landmark },
   'Web App': { label: 'Web App', Icon: AppWindow },
+  'Food & Beverage': { label: 'Food & Beverage', Icon: UtensilsCrossed },
   Kids: { label: 'Kids', Icon: Baby },
+  Telecom: { label: 'Telecom', Icon: Signal },
 };
 
 export default function Projects() {
@@ -46,6 +47,7 @@ export default function Projects() {
       'Telecom',
       'Government',
       'Web App',
+      'Food & Beverage',
       'Kids',
     ];
     return order.filter((t) => set.has(t));
@@ -286,7 +288,7 @@ function TagChip({ active, onClick, Icon, label, count, testId }: TagChipProps) 
     <button
       onClick={onClick}
       data-testid={testId}
-      className={`group inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium border transition-all ${
+      className={`group inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium border transition-all cursor-pointer ${
         active
           ? 'border-primary/60 bg-primary/15 text-primary shadow-[0_0_20px_-5px_rgba(0,240,255,0.4)]'
           : 'border-white/10 bg-white/5 text-muted-foreground hover:text-foreground hover:border-white/20 hover:bg-white/10'
