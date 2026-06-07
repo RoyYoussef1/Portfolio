@@ -13,6 +13,7 @@ import {
   Landmark,
   AppWindow,
   LayoutGrid,
+  Baby,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -23,6 +24,7 @@ const TAG_META: Record<ProjectTag, { label: string; Icon: LucideIcon }> = {
   Telecom: { label: 'Telecom', Icon: Signal },
   Government: { label: 'Government', Icon: Landmark },
   'Web App': { label: 'Web App', Icon: AppWindow },
+  Kids: { label: 'Kids', Icon: Baby },
 };
 
 export default function Projects() {
@@ -44,6 +46,7 @@ export default function Projects() {
       'Telecom',
       'Government',
       'Web App',
+      'Kids',
     ];
     return order.filter((t) => set.has(t));
   }, [categoryProjects]);
@@ -278,7 +281,7 @@ type TagChipProps = {
   testId: string;
 };
 
-function TagChip({ active, onClick, Icon, label, testId }: Omit<TagChipProps, 'count'>) {
+function TagChip({ active, onClick, Icon, label, count, testId }: TagChipProps) {
   return (
     <button
       onClick={onClick}
@@ -291,6 +294,13 @@ function TagChip({ active, onClick, Icon, label, testId }: Omit<TagChipProps, 'c
     >
       <Icon className="w-3.5 h-3.5" />
       <span>{label}</span>
+      <span
+        className={`text-xs font-mono tabular-nums px-1.5 py-0.5 rounded-full ${
+          active ? 'bg-primary/20 text-primary' : 'bg-white/10 text-muted-foreground'
+        }`}
+      >
+        {count}
+      </span>
     </button>
   );
 }

@@ -17,7 +17,7 @@ const SERVICES = [
     Icon: Globe,
     title: 'Websites',
     description:
-      'High-performance, scalable web platforms engineered for speed, SEO, and seamless user journeys — from corporate flagships to eCommerce systems.',
+      'High-performance, scalable web platforms engineered for speed, SEO, and seamless user journeys from corporate flagships to eCommerce systems.',
     tags: ['Next.js', 'WordPress', 'Shopify', 'Headless CMS'],
     accent: 'from-primary/20 to-transparent',
     border: 'hover:border-primary/50',
@@ -37,7 +37,7 @@ const SERVICES = [
     Icon: Palette,
     title: 'UX / UI Design',
     description:
-      'Research-led design systems and interfaces that align business goals with user needs — from wireframes and prototypes to production-ready components.',
+      'Research-led design systems and interfaces that align business goals with user needs from wireframes and prototypes to production-ready components.',
     tags: ['Figma', 'Design Systems', 'Prototyping', 'User Research'],
     accent: 'from-white/10 to-transparent',
     border: 'hover:border-white/30',
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Roy Youssef — Software Engineer" 
+        title="Roy Youssef - Software Engineer" 
         description="Portfolio of Roy Youssef, a Software Engineer based in Beirut, Lebanon specializing in high-performance web applications."
       />
       

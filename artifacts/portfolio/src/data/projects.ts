@@ -4,7 +4,8 @@ export type ProjectTag =
   | "Restaurant"
   | "Telecom"
   | "Government"
-  | "Web App";
+  | "Web App"
+  | "Kids";
 
 export type Project = {
   slug: string;
@@ -95,6 +96,17 @@ export const projects: Project[] = [
     tech: ["WordPress", "WooCommerce"],
     tags: ["Restaurant", "eCommerce"],
     coverImage: "/projects/wtf.png",
+  },
+  {
+    slug: "almasa-3d",
+    title: "Almasa 3D",
+    url: "https://almasa3d.com/",
+    category: "website",
+    description:
+      "A custom Shopify storefront for a 3D crystal engraving brand, blending a refined gifting aesthetic with a seamless photo-upload and customization flow.",
+    tech: ["Shopify"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/almasa3d.png",
   },
   {
     slug: "qinwan-dates",
@@ -217,6 +229,39 @@ export const projects: Project[] = [
     tech: ["Shopify", "Custom Theme"],
     tags: ["eCommerce"],
     coverImage: "/projects/unmasked.webp",
+  },
+  {
+    slug: "tiny-smiles",
+    title: "Shop Tiny Smiles",
+    url: "https://www.shoptinysmiles.com/",
+    category: "website",
+    description:
+      "A playful, family-friendly storefront for a children's oral care brand, built around its signature U-shaped toothbrush and designed to make discovery and checkout effortless.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce", "Kids"],
+    coverImage: "/projects/tinysmiles.jpg",
+  },
+  {
+    slug: "bare3",
+    title: "Bare3",
+    url: "https://bare3shop.com/",
+    category: "website",
+    description:
+      "A playful, conversion-focused storefront for a children's educational toy brand, balancing vibrant visuals with a clean bilingual (Arabic/English) RTL buying flow.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce", "Kids"],
+    coverImage: "/projects/bare3.jpg",
+  },
+  {
+    slug: "lawenme",
+    title: "LawenMe",
+    url: "https://shoplawenme.com/",
+    category: "website",
+    description:
+      "A vibrant storefront for a kids' creative brand built around colorable pyjamas and pillowcases, designed to bring its imaginative, color-it-yourself concept to life.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce", "Kids"],
+    coverImage: "/projects/lawenme.png",
   },
   {
     slug: "ikarya-sal",
