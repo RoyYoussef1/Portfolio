@@ -144,7 +144,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-muted-foreground font-mono text-xs uppercase tracking-wider">Ident</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-name" />
+                            <Input placeholder="Full Name" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -157,7 +157,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-muted-foreground font-mono text-xs uppercase tracking-wider">Return Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="john@example.com" type="email" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-email" />
+                            <Input placeholder="example@example.com" type="email" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -171,7 +171,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-muted-foreground font-mono text-xs uppercase tracking-wider">Subject Vector</FormLabel>
                         <FormControl>
-                          <Input placeholder="Project Inquiry / Job Opportunity" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-subject" />
+                          <Input placeholder="Subject" className="bg-black/20 border-white/10 focus-visible:ring-primary/50" {...field} data-testid="input-subject" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
