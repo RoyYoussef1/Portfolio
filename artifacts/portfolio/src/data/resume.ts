@@ -23,9 +23,23 @@ export const skills = {
 
 export const experience = [
   {
+    role: 'Senior Frontend Engineer',
+    company: 'Domain Agents',
+    period: '05/2026 – Present',
+    location: 'Ontario, Canada',
+    points: [
+      'Building and maintaining the front-end of the DomainAgents domain marketplace and its back-office admin platform, using Angular and TypeScript.',
+      'Developing data-heavy admin interfaces for member management, listings, and detail views with filtering, status indicators, and responsive layouts.',
+      'Defining typed API contracts with TypeScript interfaces that mirror backend payloads, keeping the front-end and API in sync.',
+      "Owning the team's GitHub repositories — managing branching, reviewing pull requests, and keeping the codebase clean and consistent.",
+      'Maintaining and shipping changes through containerized CI/CD pipelines (Kubernetes), from build to deployment.'
+    ],
+  },
+  {
     role: 'Mid Level Software Engineer',
     company: 'Four Principles',
-    period: '01/2025 – Present',
+    period: '01/2025 – 05/2026',
+    location: 'Riyadh, Saudi Arabia',
     points: [
       'Working on the official Riyadh Municipality website, building and maintaining scalable front-end components.',
       'Developing modular UI components using React.js, with thorough testing using Jest.',
