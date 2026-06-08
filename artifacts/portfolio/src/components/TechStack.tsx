@@ -8,11 +8,9 @@ import {
   SiReact,
   SiNextdotjs,
   SiAngular,
-  SiReactivex,
   SiTailwindcss,
   SiNodedotjs,
   SiExpress,
-  SiDocker,
   SiPhp,
   SiMysql,
   SiFirebase,
@@ -24,6 +22,7 @@ import {
   SiStorybook,
   SiJquery,
   SiSquarespace,
+  SiStrapi,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { useState } from "react";
@@ -51,6 +50,7 @@ const stack: TechItem[] = [
   { name: "Firebase", Icon: SiFirebase, color: "#FFCA28" },
   { name: "Storybook", Icon: SiStorybook, color: "#FF4785" },
   { name: "Jest", Icon: SiJest, color: "#C21325" },
+  { name: "Strapi CMS", Icon: SiStrapi, color: "#4945FF" },
   { name: "WordPress", Icon: SiWordpress, color: "#21759B" },
   { name: "Shopify", Icon: SiShopify, color: "#95BF47" },
   { name: "Squarespace", Icon: SiSquarespace, color: "#2D2D2D" },
