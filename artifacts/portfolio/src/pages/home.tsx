@@ -281,7 +281,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Tech Stack */}
         <TechStack />
 
         <div className="pb-20 -mt-8 flex justify-center">

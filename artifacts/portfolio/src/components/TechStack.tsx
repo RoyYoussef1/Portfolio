@@ -7,9 +7,12 @@ import {
   SiTypescript,
   SiReact,
   SiNextdotjs,
+  SiAngular,
+  SiReactivex,
   SiTailwindcss,
   SiNodedotjs,
   SiExpress,
+  SiDocker,
   SiPhp,
   SiMysql,
   SiFirebase,
@@ -20,6 +23,7 @@ import {
   SiShopify,
   SiStorybook,
   SiJquery,
+  SiSquarespace,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { useState } from "react";
@@ -33,6 +37,8 @@ type TechItem = {
 const stack: TechItem[] = [
   { name: "React", Icon: SiReact, color: "#61DAFB" },
   { name: "Next.js", Icon: SiNextdotjs, color: "#FFFFFF" },
+  { name: "Angular", Icon: SiAngular, color: "#DD0031" },
+  { name: "RxJS", Icon: SiReactivex, color: "#B7178C" },
   { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
   { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
   { name: "Tailwind", Icon: SiTailwindcss, color: "#38BDF8" },
@@ -41,6 +47,7 @@ const stack: TechItem[] = [
   { name: "Sass", Icon: SiSass, color: "#CC6699" },
   { name: "Node.js", Icon: SiNodedotjs, color: "#5FA04E" },
   { name: "Express", Icon: SiExpress, color: "#FFFFFF" },
+  { name: "Docker", Icon: SiDocker, color: "#2496ED" },
   { name: "PHP", Icon: SiPhp, color: "#777BB4" },
   { name: "MySQL", Icon: SiMysql, color: "#4479A1" },
   { name: "Firebase", Icon: SiFirebase, color: "#FFCA28" },
@@ -48,6 +55,7 @@ const stack: TechItem[] = [
   { name: "Jest", Icon: SiJest, color: "#C21325" },
   { name: "WordPress", Icon: SiWordpress, color: "#21759B" },
   { name: "Shopify", Icon: SiShopify, color: "#95BF47" },
+  { name: "Squarespace", Icon: SiSquarespace, color: "#2D2D2D" },
   { name: "jQuery", Icon: SiJquery, color: "#0769AD" },
   { name: "GitHub", Icon: SiGithub, color: "#FFFFFF" },
   { name: "GitLab", Icon: SiGitlab, color: "#FC6D26" },

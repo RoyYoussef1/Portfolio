@@ -2,23 +2,28 @@ export const skills = {
   frontend: [
     'ReactJS',
     'Next.js',
+    'Angular',
     'TypeScript',
     'JavaScript',
+    'RxJS',
     'TailwindCSS',
     'HTML5',
     'CSS3',
-    'SASS',
-    'JQuery',
+    'SCSS',
+    'jQuery',
   ],
   backend: ['NodeJS', 'ExpressJS', 'PHP', 'C++', 'C#', 'MySQL', 'Microsoft SQL'],
   tooling: [
     'React Storybook',
     'React Hook Form',
+    'Zod',
     'Jest',
     'GitHub',
     'GitLab',
+    'Docker',
+    'Kubernetes',
   ],
-  other: ['Strapi CMS', 'Firebase', 'WordPress', 'Shopify', 'LabView', 'MATLAB'],
+  other: ['Strapi CMS', 'Firebase', 'WordPress', 'Shopify', 'Squarespace', 'LabView', 'MATLAB'],
 };
 
 export const experience = [
@@ -31,7 +36,7 @@ export const experience = [
       'Building and maintaining the front-end of the DomainAgents domain marketplace and its back-office admin platform, using Angular and TypeScript.',
       'Developing data-heavy admin interfaces for member management, listings, and detail views with filtering, status indicators, and responsive layouts.',
       'Defining typed API contracts with TypeScript interfaces that mirror backend payloads, keeping the front-end and API in sync.',
-      "Owning the team's GitHub repositories — managing branching, reviewing pull requests, and keeping the codebase clean and consistent.",
+      "Owning the team's GitHub repositories: managing branching, reviewing pull requests, and keeping the codebase clean and consistent.",
       'Maintaining and shipping changes through containerized CI/CD pipelines (Kubernetes), from build to deployment.'
     ],
   },
