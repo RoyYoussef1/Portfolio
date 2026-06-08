@@ -31,16 +31,28 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = (data: ContactValues) => {
-    // Visual only - simulate network request
-    setTimeout(() => {
-      toast({
-        title: "Transmission successful",
-        description: "Your message has been routed to my inbox. I'll respond shortly.",
-        duration: 5000,
+  const onSubmit = async (data: ContactValues) => {
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "7cc868b8-cf66-4e83-8897-0b84167d971f",
+          ...data,
+        }),
       });
+      const result = await res.json();
+      if (!result.success) throw new Error(result.message || "Submission failed");
+      toast({ title: "Message sent", description: "Thanks — I'll get back to you shortly.", duration: 5000 });
       form.reset();
-    }, 800);
+    } catch {
+      toast({
+        variant: "destructive",
+        title: "Something went wrong",
+        description: "Your message didn't go through. You can email me directly at roy.b.youssef@gmail.com.",
+        duration: 7000,
+      });
+    }
   };
 
   return (
@@ -99,16 +111,6 @@ export default function Contact() {
                     <a href="tel:+96176348117" className="font-medium hover:text-primary transition-colors">
                       +961 76 348 117
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground font-mono mb-1">Location</p>
-                    <p className="font-medium">Beirut, Lebanon</p>
                   </div>
                 </div>
               </div>
