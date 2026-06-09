@@ -18,7 +18,7 @@ const SERVICES = [
     title: 'Websites',
     description:
       'High-performance, scalable web platforms engineered for speed, SEO, and seamless user journeys from corporate flagships to eCommerce systems.',
-    tags: ['Next.js', 'WordPress', 'Shopify', 'Headless CMS'],
+    tags: ['Next.js', 'React.js', 'Angular', 'WordPress', 'Shopify', 'Headless CMS'],
     accent: 'from-primary/20 to-transparent',
     border: 'hover:border-primary/50',
     glow: 'rgba(0,240,255,0.15)',
@@ -28,10 +28,10 @@ const SERVICES = [
     title: 'Mobile Applications',
     description:
       'Cross-platform native experiences built for iOS and Android. Fluid interfaces, real-time data, and device-native interactions that feel right.',
-    tags: ['React Native', 'Expo', 'iOS', 'Android'],
+    tags: ['React Native', 'Flutter', 'Expo', 'iOS', 'Android'],
     accent: 'from-secondary/20 to-transparent',
     border: 'hover:border-secondary/50',
-    glow: 'rgba(180,0,255,0.12)',
+    glow: 'rgba(180,0,255,0.12)', 
   },
   {
     Icon: Palette,
