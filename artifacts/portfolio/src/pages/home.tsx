@@ -164,7 +164,7 @@ export default function Home() {
                 }}
               >
                 <img
-                  src="/roy.png"
+                  src="/roy_compressed.png"
                   alt="Roy Youssef"
                   className="w-full h-full object-cover object-top"
                 />
