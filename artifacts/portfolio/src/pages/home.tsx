@@ -56,10 +56,8 @@ export default function Home() {
       />
       
       <div className="container mx-auto px-6">
-        {/* Hero Section */}
         <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-8 md:pt-0">
 
-          {/* Smooth ambient glow — centered, bleeds into page seamlessly */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -75,10 +73,7 @@ export default function Home() {
             }}
           />
 
-          {/* Two-column layout */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
-
-            {/* Left — text */}
             <div className="flex-1 min-w-0">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -98,7 +93,6 @@ export default function Home() {
                 Software <span className="text-gradient">Engineer</span> &amp; Digital Architect.
               </motion.h2>
 
-              {/* Stats row */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,7 +107,6 @@ export default function Home() {
                 ))}
               </motion.div>
 
-              {/* CTA buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -137,27 +130,20 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Right — avatar */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="relative flex-shrink-0 w-72 h-72 md:w-96 md:h-96"
             >
-              {/* Outer rotating ring */}
               <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite]">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_3px_rgba(0,240,255,0.7)]" />
               </div>
-              {/* Inner counter-rotating ring */}
               <div className="absolute inset-4 rounded-full border border-secondary/15 animate-[spin_14s_linear_infinite_reverse]">
                 <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_2px_rgba(160,0,255,0.6)]" />
               </div>
-
-              {/* Glow behind image */}
               <div className="absolute inset-8 rounded-full bg-primary/10 blur-2xl" />
               <div className="absolute inset-12 rounded-full bg-secondary/10 blur-2xl" />
-
-              {/* Image container */}
               <div className="absolute inset-6 rounded-full overflow-hidden border border-white/10"
                 style={{
                   boxShadow: '0 0 40px -8px rgba(0,240,255,0.3), 0 0 80px -20px rgba(140,0,220,0.2)',
@@ -168,7 +154,6 @@ export default function Home() {
                   alt="Roy Youssef"
                   className="w-full h-full object-cover object-top"
                 />
-                {/* Subtle inner gradient overlay */}
                 <div className="absolute inset-0 rounded-full"
                   style={{
                     background: 'radial-gradient(ellipse at bottom, rgba(0,0,0,0.3) 0%, transparent 60%)',
@@ -180,8 +165,6 @@ export default function Home() {
           </div>
 
         </section>
-
-        {/* Services */}
         <section className="py-20 border-t border-white/5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -239,7 +222,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Selected Work */}
         <section className="py-20 border-t border-white/5">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl font-bold">Selected Work</h2>

@@ -24,6 +24,7 @@ import {
   SiJquery,
   SiSquarespace,
   SiStrapi,
+  SiGo,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { useState } from "react";
@@ -44,6 +45,7 @@ const stack: TechItem[] = [
   { name: "HTML5", Icon: SiHtml5, color: "#E34F26" },
   { name: "CSS3", Icon: SiCss, color: "#1572B6" },
   { name: "Sass", Icon: SiSass, color: "#CC6699" },
+  { name: "Go", Icon: SiGo, color: "#007D9C" },
   { name: "Node.js", Icon: SiNodedotjs, color: "#5FA04E" },
   { name: "Express", Icon: SiExpress, color: "#FFFFFF" },
   { name: "PHP", Icon: SiPhp, color: "#777BB4" },

@@ -12,7 +12,7 @@ export const skills = {
     'SCSS',
     'jQuery',
   ],
-  backend: ['NodeJS', 'ExpressJS', 'PHP', 'C++', 'C#', 'MySQL', 'Microsoft SQL'],
+  backend: ['NodeJS', 'ExpressJS', 'PHP','Go', 'C++', 'C#', 'MySQL', 'Microsoft SQL'],
   tooling: [
     'React Storybook',
     'React Hook Form',
@@ -28,13 +28,15 @@ export const skills = {
 
 export const experience = [
   {
-    role: 'Senior Frontend Engineer',
+    role: 'Senior Full Stack Engineer',
     company: 'Domain Agents',
-    period: '05/2026 – Present',
+    period: '04/2026 – Present',
     location: 'Ontario, Canada',
     points: [
       'Building and maintaining the front-end of the DomainAgents domain marketplace and its back-office admin platform, using Angular and TypeScript.',
       'Developing data-heavy admin interfaces for member management, listings, and detail views with filtering, status indicators, and responsive layouts.',
+      'Designing, building, and maintaining backend services in Go — from new service development to ongoing maintenance of existing ones.',
+      'Owning database work end-to-end, including schema design, table creation, and modifications, alongside developing REST API endpoints.',
       'Defining typed API contracts with TypeScript interfaces that mirror backend payloads, keeping the front-end and API in sync.',
       "Owning the team's GitHub repositories: managing branching, reviewing pull requests, and keeping the codebase clean and consistent.",
       'Maintaining and shipping changes through containerized CI/CD pipelines (Kubernetes), from build to deployment.'
@@ -43,7 +45,7 @@ export const experience = [
   {
     role: 'Mid Level Software Engineer',
     company: 'Four Principles',
-    period: '01/2025 – 05/2026',
+    period: '01/2025 – 04/2026',
     location: 'Riyadh, Saudi Arabia',
     points: [
       'Working on the official Riyadh Municipality website, building and maintaining scalable front-end components.',
