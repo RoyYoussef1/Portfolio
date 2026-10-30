@@ -17,7 +17,7 @@ const SERVICE_STYLE = [
 const SERVICES = SERVICE_TEXT.map((s, i) => ({ ...s, ...SERVICE_STYLE[i % SERVICE_STYLE.length] }));
 
 export default function Home() {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects.slice(0, 6);
 
   return (
     <>

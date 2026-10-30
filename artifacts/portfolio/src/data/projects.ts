@@ -289,17 +289,6 @@ export const projects: Project[] = [
     coverImage: "/projects/freya.webp",
   },
   {
-    slug: "barkey-dog-care",
-    title: "Barkey Dog Care",
-    url: "https://barkeydogcare.com/",
-    category: "website",
-    description:
-      "A Lebanese online store for science-backed dog grooming products, toys and accessories, with cash on delivery across Lebanon.",
-    tech: ["Shopify", "Custom Theme"],
-    tags: ["eCommerce"],
-    coverImage: "/projects/barkey.webp",
-  },
-  {
     slug: "shop-die-cast-lab",
     title: "Die Cast Lab",
     url: "https://shopdiecastlab.com/",
@@ -397,6 +386,17 @@ export const projects: Project[] = [
     tech: ["Shopify", "Custom Theme"],
     tags: ["eCommerce", "Kids"],
     coverImage: "/projects/lawenme.png",
+  },
+  {
+    slug: "barkey-dog-care",
+    title: "Barkey Dog Care",
+    url: "https://barkeydogcare.com/",
+    category: "website",
+    description:
+      "A Lebanese online store for science-backed dog grooming products, toys and accessories, with cash on delivery across Lebanon.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/barkey.webp",
   },
   {
     slug: "ikarya-sal",

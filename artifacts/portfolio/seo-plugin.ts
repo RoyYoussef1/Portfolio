@@ -109,7 +109,7 @@ const bodies: Record<PageKey, () => string> = {
 <section><h2>What I Build.</h2>${SERVICES.map(
     (s) => `<h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><p>${esc(s.tags.join(", "))}</p>`,
   ).join("")}</section>
-<section><h2>Selected Work</h2>${projectList(projects.slice(0, 3))}<p>${link("/projects", "View all projects")}</p></section>
+<section><h2>Selected Work</h2>${projectList(projects.slice(0, 6))}<p>${link("/projects", "View all projects")}</p></section>
 <section><h2>The toolkit I build with.</h2><p>${esc(knowsAbout.join(", "))}</p><p>${link("/about", "Explore full skill matrix")}</p></section>`,
 
   about: () => `
