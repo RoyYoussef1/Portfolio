@@ -132,6 +132,8 @@ const bodies: Record<PageKey, () => string> = {
     .join("")}</ul></section>
 <section><h2>Frequently Asked Questions</h2>${FAQ.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</section>`,
 
+  about2: () => bodies.about(),
+
   projects: () => `
 <h1>Projects.</h1>
 <p>Digital platforms, e-commerce systems, and applications engineered for clients globally.</p>
@@ -291,6 +293,7 @@ export function seoPlugin(): Plugin {
       const files: Record<PageKey, string> = {
         home: "index.html",
         about: "about.html",
+        about2: "about-2.html",
         projects: "projects.html",
         contact: "contact.html",
         notFound: "404.html",

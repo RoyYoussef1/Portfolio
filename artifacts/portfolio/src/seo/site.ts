@@ -36,7 +36,7 @@ export const SITE = {
     "Roy Youssef is a Senior Full Stack Engineer based in Beirut, Lebanon, currently at Domain Agents. He builds fast, SEO-friendly web platforms with React, Next.js, Angular, TypeScript and Go, and has shipped 40+ websites — from the official Riyadh Municipality and Abu Dhabi Early Childhood Authority websites to eCommerce for Red Bull Mobile Oman and KSA.",
 } as const;
 
-export type PageKey = "home" | "about" | "projects" | "contact" | "notFound";
+export type PageKey = "home" | "about" | "about2" | "projects" | "contact" | "notFound";
 
 export type PageMeta = {
   path: string;
@@ -67,6 +67,15 @@ export const PAGES: Record<PageKey, PageMeta> = {
       "Experience, skills and education of Roy Youssef: Senior Full Stack Engineer at Domain Agents, formerly Four Principles (Riyadh) and Interesting Times (Beirut).",
     changefreq: "monthly",
     priority: 0.9,
+  },
+  about2: {
+    path: "/about-2",
+    label: "About",
+    title: "About Roy Youssef - Senior Full Stack Engineer",
+    description:
+      "Roy Youssef's route from Beirut to Riyadh to Domain Agents: experience, skills, education and languages of a Senior Full Stack Engineer.",
+    // Design variant of /about — kept out of search results so it doesn't compete with it.
+    noindex: true,
   },
   projects: {
     path: "/projects",
@@ -195,7 +204,7 @@ export function pageSchema(
   const page = PAGES[key];
   const url = absUrl(page.path);
   const pageType =
-    key === "home" || key === "about" ? "ProfilePage" : key === "contact" ? "ContactPage" : key === "projects" ? "CollectionPage" : "WebPage";
+    key === "home" || key === "about" || key === "about2" ? "ProfilePage" : key === "contact" ? "ContactPage" : key === "projects" ? "CollectionPage" : "WebPage";
 
   const graph: Record<string, unknown>[] = [
     personSchema(opts.knowsAbout),
