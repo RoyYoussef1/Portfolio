@@ -5,6 +5,7 @@ import { Download, Mail } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { skills, experience, education, languages } from "@/data/resume";
 import { FAQ, SITE } from "@/seo/site";
+import { COUNTRIES, COUNTRY_REGIONS } from "@/data/countries";
 
 /* ------------------------------------------------------------------ data -- */
 
@@ -79,17 +80,26 @@ export default function AboutTwo() {
 
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Hero ---------------------------------------------------------- */}
-        <section className="grid lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-20 items-end pt-10 md:pt-16 pb-20 md:pb-28">
-          <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.04] max-w-[17ch] text-balance">
-              I build the web platforms that governments, telecoms and marketplaces run on.
-            </h1>
-            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-[60ch]">
-              I'm Roy, a {SITE.jobTitle.toLowerCase()} based in {SITE.location.city}. I started with custom WordPress
-              builds for brands like Red Bull MEA, moved on to the official Riyadh Municipality website in Next.js, and
-              now own the front end, Go services and databases at {SITE.worksFor.name}.
+        <section className="pt-10 md:pt-16 pb-20 md:pb-28">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.02] max-w-[20ch] text-balance">
+            I build the web platforms that governments, telecoms and marketplaces run on.
+          </h1>
+
+          <div className="mt-12 md:mt-16 pt-10 border-t border-white/10 grid gap-8 md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] items-start">
+            <img
+              src={SITE.image}
+              alt="Portrait of Roy Youssef"
+              width={1122}
+              height={1402}
+              fetchPriority="high"
+              className="w-28 h-28 md:w-36 md:h-36 rounded-2xl object-cover object-top border border-white/10 bg-card"
+            />
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-[60ch]">
+              I'm Roy, a {SITE.jobTitle.toLowerCase()}. I started with custom WordPress builds for brands like Red Bull
+              MEA, moved on to the official Riyadh Municipality website in Next.js, and now own the front end, Go
+              services and databases at {SITE.worksFor.name}.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 md:col-start-2 lg:col-start-auto">
               <a
                 href={SITE.resume}
                 download
@@ -106,24 +116,6 @@ export default function AboutTwo() {
               </Link>
             </div>
           </div>
-
-          <figure className="relative max-w-sm w-full mx-auto lg:mx-0 lg:justify-self-end">
-            <div
-              className="absolute -inset-px rounded-[2rem] bg-gradient-to-br from-primary/50 via-transparent to-secondary/50"
-              aria-hidden
-            />
-            <img
-              src={SITE.image}
-              alt="Portrait of Roy Youssef"
-              width={1122}
-              height={1402}
-              fetchPriority="high"
-              className="relative w-full aspect-[4/5] object-cover object-top rounded-[2rem] bg-card"
-            />
-            <figcaption className="mt-4 text-sm text-muted-foreground">
-              {SITE.location.city}, {SITE.location.country}
-            </figcaption>
-          </figure>
         </section>
 
         {/* Route --------------------------------------------------------- */}
@@ -276,6 +268,43 @@ export default function AboutTwo() {
                 </ul>
               </motion.article>
             </AnimatePresence>
+          </div>
+        </section>
+
+        {/* Countries ----------------------------------------------------- */}
+        <section aria-labelledby="countries-heading" className="pb-24 md:pb-32">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <h2 id="countries-heading" className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Clients in {COUNTRIES.length} countries
+            </h2>
+            <p className="text-muted-foreground max-w-sm">
+              Websites and platforms I've delivered for clients across four regions.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-x-10 gap-y-12">
+            {COUNTRY_REGIONS.map(({ region, countries }) => (
+              <div key={region}>
+                <h3 className="flex items-baseline justify-between text-foreground font-semibold pb-3 mb-4 border-b border-white/10">
+                  {region}
+                  <span className="text-sm font-normal text-muted-foreground tabular-nums">{countries.length}</span>
+                </h3>
+                <ul className={`grid gap-x-8 gap-y-3 ${countries.length > 4 ? "sm:grid-cols-2" : ""}`}>
+                  {countries.map(({ name, code }) => (
+                    <li key={code} className="flex items-center gap-3 text-muted-foreground">
+                      <img
+                        src={`https://flagcdn.com/${code}.svg`}
+                        alt=""
+                        width={24}
+                        height={16}
+                        loading="lazy"
+                        className="w-6 h-4 object-cover rounded-[3px] ring-1 ring-white/10 shrink-0"
+                      />
+                      {name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 

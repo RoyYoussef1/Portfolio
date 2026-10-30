@@ -20,7 +20,7 @@ export const SITE = {
   image: "/roy_compressed.png",
   ogImage: "/og-image.jpg",
   ogImageAlt: "Roy Youssef - Senior Full Stack Engineer",
-  resume: "/Roy_Youssef_RESUME.pdf",
+  resume: "/Roy_Youssef_RESUME_2026.pdf",
   themeColor: "#09090b",
   sameAs: [
     "https://github.com/RoyYoussef1",
@@ -116,7 +116,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "What notable projects has Roy Youssef worked on?",
-    a: "He has worked on the official Riyadh Municipality website, the Abu Dhabi Early Childhood Authority website, Red Bull Mobile Oman and Red Bull Mobile KSA, and eCommerce sites such as Santafoo — over 40 projects across 12+ countries.",
+    a: "He has worked on the official Riyadh Municipality website, the Abu Dhabi Early Childhood Authority website, Red Bull Mobile Oman and Red Bull Mobile KSA, and eCommerce sites such as Santafoo — over 40 projects for clients in 17 countries across the Middle East, Africa, Europe, Central Asia and North America.",
   },
   {
     q: "Where did Roy Youssef study?",

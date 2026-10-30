@@ -1,7 +1,7 @@
 export const STATS = [
   { value: "40+", label: "Projects Shipped" },
   { value: "5+", label: "Years Building" },
-  { value: "12+", label: "Countries Reached" },
+  { value: "17", label: "Countries Reached" },
 ];
 
 export const SERVICES = [

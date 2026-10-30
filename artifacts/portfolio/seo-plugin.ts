@@ -20,6 +20,7 @@ import { FAQ, PAGES, SITE, absUrl, pageSchema, type PageKey } from "./src/seo/si
 import { education, experience, languages, skills } from "./src/data/resume";
 import { projects } from "./src/data/projects";
 import { SERVICES, STATS } from "./src/data/home";
+import { COUNTRY_REGIONS, COUNTRIES } from "./src/data/countries";
 
 const HEAD_START = "<!--seo:start-->";
 const HEAD_END = "<!--seo:end-->";
@@ -132,7 +133,10 @@ const bodies: Record<PageKey, () => string> = {
     .join("")}</ul></section>
 <section><h2>Frequently Asked Questions</h2>${FAQ.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</section>`,
 
-  about2: () => bodies.about(),
+  about2: () =>
+    bodies.about() +
+    `
+<section><h2>Clients in ${COUNTRIES.length} countries</h2>${COUNTRY_REGIONS.map((r) => `<h3>${esc(r.region)}</h3><p>${esc(r.countries.map((c) => c.name).join(", "))}</p>`).join("")}</section>`,
 
   projects: () => `
 <h1>Projects.</h1>
@@ -208,6 +212,7 @@ ${INDEXABLE.map((k) => `- [${PAGES[k].label}](${absUrl(PAGES[k].path)}): ${PAGES
     .join("; ")}
 - Education: ${education.map((e) => `${e.degree}, ${e.institution} (${e.period})`).join("; ")}
 - Core stack: ${[...skills.frontend.slice(0, 5), "Go", "Node.js"].join(", ")}
+- Countries worked with (${COUNTRIES.length}): ${COUNTRIES.map((c) => c.name).join(", ")}
 - Languages: ${languages.map((l) => `${l.language} (${l.proficiency})`).join(", ")}
 - Notable projects: ${projects
     .slice(0, 6)
@@ -253,6 +258,10 @@ ${Object.entries(skills)
 ## Services
 
 ${SERVICES.map((s) => `- ${s.title}: ${s.description}`).join("\n")}
+
+## Countries worked with (${COUNTRIES.length})
+
+${COUNTRY_REGIONS.map((r) => `- ${r.region}: ${r.countries.map((c) => c.name).join(", ")}`).join("\n")}
 
 ## Languages
 
