@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Home, User, Layers, Mail, Github, Linkedin } from "lucide-react";
+import { Home, User, Layers, Mail, Github, Linkedin, Phone } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/",         label: "Home",     Icon: Home },
-  { href: "/about",   label: "About",    Icon: User },
   { href: "/projects",label: "Projects", Icon: Layers },
+  { href: "/about",   label: "About",    Icon: User },
   { href: "/contact", label: "Contact",  Icon: Mail },
 ];
 
@@ -76,6 +76,10 @@ export function Navbar() {
           <a href="mailto:roy.b.youssef@gmail.com" aria-label="Email Roy Youssef"
             className="text-muted-foreground hover:text-primary transition-colors">
             <Mail className="w-5 h-5" />
+          </a>
+          <a href="tel:+96176348117" aria-label="Call Roy Youssef on +961 76 348 117"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            <Phone className="w-5 h-5" />
           </a>
         </div>
 

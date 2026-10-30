@@ -6,6 +6,7 @@
  * Keep this file free of imports from React or node_modules so it can be
  * loaded by vite.config.ts as well as by the app.
  */
+import { COUNTRIES, COUNTRY_REGIONS } from "../data/countries";
 
 export const SITE = {
   url: "https://www.royyoussef.com",
@@ -36,7 +37,7 @@ export const SITE = {
     "Roy Youssef is a Senior Full Stack Engineer based in Beirut, Lebanon, currently at Domain Agents. He builds fast, SEO-friendly web platforms with React, Next.js, Angular, TypeScript and Go, and has shipped 40+ websites — from the official Riyadh Municipality and Abu Dhabi Early Childhood Authority websites to eCommerce for Red Bull Mobile Oman and KSA.",
 } as const;
 
-export type PageKey = "home" | "about" | "about2" | "projects" | "contact" | "notFound";
+export type PageKey = "home" | "about" | "projects" | "contact" | "notFound";
 
 export type PageMeta = {
   path: string;
@@ -62,20 +63,11 @@ export const PAGES: Record<PageKey, PageMeta> = {
   about: {
     path: "/about",
     label: "About",
-    title: "About Roy Youssef - Experience, Skills & Education",
+    title: "About Roy Youssef | Senior Full Stack Engineer",
     description:
-      "Experience, skills and education of Roy Youssef: Senior Full Stack Engineer at Domain Agents, formerly Four Principles (Riyadh) and Interesting Times (Beirut).",
+      `Roy Youssef's career from Beirut to Riyadh to Domain Agents: experience, skills, education, languages and clients in ${COUNTRIES.length} countries.`,
     changefreq: "monthly",
     priority: 0.9,
-  },
-  about2: {
-    path: "/about-2",
-    label: "About",
-    title: "About Roy Youssef - Senior Full Stack Engineer",
-    description:
-      "Roy Youssef's route from Beirut to Riyadh to Domain Agents: experience, skills, education and languages of a Senior Full Stack Engineer.",
-    // Design variant of /about — kept out of search results so it doesn't compete with it.
-    noindex: true,
   },
   projects: {
     path: "/projects",
@@ -117,6 +109,12 @@ export const FAQ: { q: string; a: string }[] = [
   {
     q: "What notable projects has Roy Youssef worked on?",
     a: "He has worked on the official Riyadh Municipality website, the Abu Dhabi Early Childhood Authority website, Red Bull Mobile Oman and Red Bull Mobile KSA, and eCommerce sites such as Santafoo — over 40 projects for clients in 17 countries across the Middle East, Africa, Europe, Central Asia and North America.",
+  },
+  {
+    q: "Which countries has Roy Youssef worked with?",
+    a: `Roy has delivered work for clients in ${COUNTRIES.length} countries: ${COUNTRY_REGIONS.map(
+      (r) => `${r.countries.map((c) => c.name).join(", ")} (${r.region})`,
+    ).join("; ")}.`,
   },
   {
     q: "Where did Roy Youssef study?",
@@ -204,7 +202,7 @@ export function pageSchema(
   const page = PAGES[key];
   const url = absUrl(page.path);
   const pageType =
-    key === "home" || key === "about" || key === "about2" ? "ProfilePage" : key === "contact" ? "ContactPage" : key === "projects" ? "CollectionPage" : "WebPage";
+    key === "home" || key === "about" ? "ProfilePage" : key === "contact" ? "ContactPage" : key === "projects" ? "CollectionPage" : "WebPage";
 
   const graph: Record<string, unknown>[] = [
     personSchema(opts.knowsAbout),

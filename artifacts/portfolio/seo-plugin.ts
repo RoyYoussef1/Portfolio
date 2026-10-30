@@ -21,6 +21,7 @@ import { education, experience, languages, skills } from "./src/data/resume";
 import { projects } from "./src/data/projects";
 import { SERVICES, STATS } from "./src/data/home";
 import { COUNTRY_REGIONS, COUNTRIES } from "./src/data/countries";
+import { ABOUT_HEADLINE, ABOUT_INTRO, SKILL_GROUPS, STOPS } from "./src/data/about";
 
 const HEAD_START = "<!--seo:start-->";
 const HEAD_END = "<!--seo:end-->";
@@ -78,7 +79,7 @@ const link = (href: string, text: string, external = false) =>
   `<a href="${esc(href)}"${external ? ' rel="noopener"' : ""}>${esc(text)}</a>`;
 
 const nav = () =>
-  `<header><nav aria-label="Main"><ul>${(["home", "about", "projects", "contact"] as PageKey[])
+  `<header><nav aria-label="Main"><ul>${(["home", "projects", "about", "contact"] as PageKey[])
     .map((k) => `<li>${link(PAGES[k].path, PAGES[k].label)}</li>`)
     .join("")}</ul></nav></header>`;
 
@@ -112,31 +113,29 @@ const bodies: Record<PageKey, () => string> = {
 <section><h2>The toolkit I build with.</h2><p>${esc(knowsAbout.join(", "))}</p><p>${link("/about", "Explore full skill matrix")}</p></section>`,
 
   about: () => `
-<h1>About Me.</h1>
-<section><h2>Profile</h2><p>${esc(SITE.summary)}</p></section>
-<section><h2>Experience</h2>${experience
-    .map(
-      (j) =>
-        `<article><h3>${esc(j.role)} — ${esc(j.company)}</h3><p>${esc(j.location)} · ${esc(j.period)}</p><ul>${j.points
-          .map((pt) => `<li>${esc(pt)}</li>`)
-          .join("")}</ul></article>`,
-    )
-    .join("")}</section>
-<section><h2>Education</h2>${education
-    .map((e) => `<h3>${esc(e.degree)}</h3><p>${esc(e.institution)} — ${esc(e.location)} · ${esc(e.period)}</p>`)
-    .join("")}</section>
-<section><h2>Skills Matrix</h2>${Object.entries(skills)
-    .map(([cat, items]) => `<h3>${esc(cat)}</h3><p>${esc(items.join(", "))}</p>`)
-    .join("")}</section>
+<h1>${esc(ABOUT_HEADLINE)}</h1>
+<p>${esc(ABOUT_INTRO)}</p>
+<p><a href="${SITE.resume}">Download CV</a> · ${link("/contact", "Get in touch")}</p>
+<section><h2>The route so far</h2>${STOPS.map(
+    (s) =>
+      `<article><h3>${esc(s.year)} — ${esc(s.role)}, ${esc(s.org)}</h3><p>${esc(s.place)} · ${esc(s.period)}${
+        s.current ? " (current)" : ""
+      }</p><ul>${s.points.map((pt) => `<li>${esc(pt)}</li>`).join("")}</ul></article>`,
+  ).join("")}</section>
+<section><h2>Clients in ${COUNTRIES.length} countries</h2><p>Websites and platforms I've delivered for clients across four regions.</p>${COUNTRY_REGIONS.map(
+    (r) => `<h3>${esc(r.region)}</h3><ul>${r.countries.map((c) => `<li>${esc(c.name)}</li>`).join("")}</ul>`,
+  ).join("")}</section>
+<section><h2>What I work with</h2>${SKILL_GROUPS.map(
+    (g) => `<h3>${esc(g.title)}</h3><p>${esc(g.items.join(", "))}</p>`,
+  ).join("")}</section>
 <section><h2>Languages</h2><ul>${languages
     .map((l) => `<li>${esc(l.language)} — ${esc(l.proficiency)}</li>`)
     .join("")}</ul></section>
-<section><h2>Frequently Asked Questions</h2>${FAQ.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</section>`,
-
-  about2: () =>
-    bodies.about() +
-    `
-<section><h2>Clients in ${COUNTRIES.length} countries</h2>${COUNTRY_REGIONS.map((r) => `<h3>${esc(r.region)}</h3><p>${esc(r.countries.map((c) => c.name).join(", "))}</p>`).join("")}</section>`,
+<section><h2>Education</h2>${education
+    .map((e) => `<h3>${esc(e.degree)}</h3><p>${esc(e.institution)}, ${esc(e.location)} · ${esc(e.period)}</p>`)
+    .join("")}</section>
+<section><h2>Common questions</h2>${FAQ.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</section>
+<section><h2>Have a role or a project in mind?</h2><p>${link(`mailto:${SITE.email}`, "Email me")} · ${link("/contact", "Use the contact form")}</p></section>`,
 
   projects: () => `
 <h1>Projects.</h1>
@@ -302,7 +301,6 @@ export function seoPlugin(): Plugin {
       const files: Record<PageKey, string> = {
         home: "index.html",
         about: "about.html",
-        about2: "about-2.html",
         projects: "projects.html",
         contact: "contact.html",
         notFound: "404.html",

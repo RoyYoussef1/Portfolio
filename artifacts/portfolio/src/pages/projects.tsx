@@ -180,14 +180,13 @@ export default function Projects() {
                     className="group flex flex-col glass-panel rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(0,240,255,0.15)] transition-all duration-300"
                     data-testid={`project-card-${project.slug}`}
                   >
-                    <div className="aspect-[4/3] relative overflow-hidden bg-black/50">
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+                    <div className="aspect-[4/3] relative overflow-hidden bg-black/50 isolate [transform:translateZ(0)]">
                       <img
                         src={project.coverImage}
                         alt={`${project.title} website by Roy Youssef`}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        className="block w-full h-full object-cover object-center transform-gpu [backface-visibility:hidden] group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-background/80 backdrop-blur flex items-center justify-center border border-white/10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
                         <ExternalLink className="w-4 h-4 text-primary" />

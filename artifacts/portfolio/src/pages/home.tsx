@@ -227,14 +227,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group block glass-panel rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
+                <div className="aspect-[4/3] overflow-hidden relative isolate [transform:translateZ(0)]">
                   <img 
                     src={project.coverImage}
                     alt={`${project.title} website by Roy Youssef`}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="block w-full h-full object-cover transform-gpu [backface-visibility:hidden] group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="p-6 relative">
