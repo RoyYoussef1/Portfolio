@@ -14,6 +14,8 @@ import {
   AppWindow,
   LayoutGrid,
   Baby,
+  Dumbbell,
+  HeartPulse,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -26,6 +28,8 @@ const TAG_META: Record<ProjectTag, { label: string; Icon: LucideIcon }> = {
   'Food & Beverage': { label: 'Food & Beverage', Icon: UtensilsCrossed },
   Kids: { label: 'Kids', Icon: Baby },
   Telecom: { label: 'Telecom', Icon: Signal },
+  'Sports & Fitness': { label: 'Sports & Fitness', Icon: Dumbbell },
+  'Health & Wellness': { label: 'Health & Wellness', Icon: HeartPulse },
 };
 
 export default function Projects() {
@@ -49,6 +53,8 @@ export default function Projects() {
       'Web App',
       'Food & Beverage',
       'Kids',
+      'Sports & Fitness',
+      'Health & Wellness',
     ];
     return order.filter((t) => set.has(t));
   }, [categoryProjects]);

@@ -34,7 +34,7 @@ export const SITE = {
   },
   /** One-paragraph factual summary — reused in hero copy, meta, schema and llms.txt. */
   summary:
-    "Roy Youssef is a Senior Full Stack Engineer based in Beirut, Lebanon, currently at Domain Agents. He builds fast, SEO-friendly web platforms with React, Next.js, Angular, TypeScript and Go, and has shipped 40+ websites — from the official Riyadh Municipality and Abu Dhabi Early Childhood Authority websites to eCommerce for Red Bull Mobile Oman and KSA.",
+    "Roy Youssef is a Senior Full Stack Engineer based in Beirut, Lebanon, currently at Domain Agents. He builds fast, SEO-friendly web platforms with React, Next.js, Angular, TypeScript and Go, and has shipped 50+ websites — from the official Riyadh Municipality and Abu Dhabi Early Childhood Authority websites to eCommerce for Red Bull Mobile Oman and KSA.",
 } as const;
 
 export type PageKey = "home" | "about" | "projects" | "contact" | "notFound";
@@ -74,7 +74,7 @@ export const PAGES: Record<PageKey, PageMeta> = {
     label: "Projects",
     title: "Projects - Websites & Web Apps by Roy Youssef",
     description:
-      "40+ websites and web apps built by Roy Youssef, including the Riyadh Municipality website, Abu Dhabi ECA, Red Bull Mobile Oman & KSA, and eCommerce stores.",
+      "50+ websites and web apps built by Roy Youssef, including the Riyadh Municipality website, Red Bull Mobile Oman & KSA, Pixcen, Balady+ and Abu Dhabi ECA.",
     changefreq: "monthly",
     priority: 0.9,
   },
@@ -108,7 +108,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "What notable projects has Roy Youssef worked on?",
-    a: "He has worked on the official Riyadh Municipality website, the Abu Dhabi Early Childhood Authority website, Red Bull Mobile Oman and Red Bull Mobile KSA, and eCommerce sites such as Santafoo — over 40 projects for clients in 17 countries across the Middle East, Africa, Europe, Central Asia and North America.",
+    a: "He has worked on the official Riyadh Municipality website, the Abu Dhabi Early Childhood Authority website, Red Bull Mobile Oman and Red Bull Mobile KSA, the Balady+ app website, the Pixcen agency website, and eCommerce sites such as Santafoo — over 50 projects for clients in 17 countries across the Middle East, Africa, Europe, Central Asia and North America.",
   },
   {
     q: "Which countries has Roy Youssef worked with?",

@@ -6,7 +6,9 @@ export type ProjectTag =
   | "Web App"
   | "Food & Beverage"
   | "Kids"
-  | "Telecom";
+  | "Telecom"
+  | "Sports & Fitness"
+  | "Health & Wellness";
 
 export type Project = {
   slug: string;
@@ -53,6 +55,28 @@ export const projects: Project[] = [
     tech: ["WordPress", "WooCommerce", "Custom Theming"],
     tags: ["Telecom", "eCommerce"],
     coverImage: "/projects/rbmKSA.jpg",
+  },
+  {
+    slug: "pixcen",
+    title: "Pixcen",
+    url: "https://pixcen.com/",
+    category: "website",
+    description:
+      "The website for Pixcen, a web, app and AI agency in Lebanon and the UAE, presenting its services from development to SEO, GEO and paid ads, with a project portfolio and virtual office tour.",
+    tech: ["Astro", "TypeScript", "SEO & GEO"],
+    tags: ["Corporate"],
+    coverImage: "/projects/pixcen.webp",
+  },
+  {
+    slug: "balady-plus",
+    title: "Balady+",
+    url: "https://baladyplus.sa",
+    category: "website",
+    description:
+      "The bilingual Arabic and English website for Balady+, a Saudi maps and navigation app, showcasing features like transit planning, building entrances and speed-bump alerts.",
+    tech: ["WordPress", "Elementor", "ACF", "Polylang"],
+    tags: ["Corporate"],
+    coverImage: "/projects/balady.webp",
   },
   {
     slug: "santafoo",
@@ -121,6 +145,17 @@ export const projects: Project[] = [
     coverImage: "/projects/qinwan.webp",
   },
   {
+    slug: "sultan-bakery",
+    title: "Sultan Bakery (US)",
+    url: "https://sultanbakery.us/",
+    category: "website",
+    description:
+      "A US online store for a Lebanese-heritage bakery selling kaak and ghraibeh, with gift bundles, wholesale ordering and a where-to-buy locator.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce", "Food & Beverage"],
+    coverImage: "/projects/sultan.webp",
+  },
+  {
     slug: "solar-web",
     title: "Solar Web",
     url: "https://bejewelled-boba-431440.netlify.app/",
@@ -144,6 +179,17 @@ export const projects: Project[] = [
     coverImage: "/projects/prodLab.jpeg",
   },
   {
+    slug: "flysquid",
+    title: "Flysquid",
+    url: "https://flysquid.com/",
+    category: "website",
+    description:
+      "A sharp creative agency presence built around motion, type, and a refined visual system.",
+    tech: ["WordPress", "Custom Theme"],
+    tags: ["Corporate"],
+    coverImage: "/projects/FLYSQUID-FINAL-LOGO-02-scaled.png",
+  },
+  {
     slug: "cheffedoeuvre",
     title: "Cheffe d'Œuvre",
     url: "https://cheffedoeuvre.com/",
@@ -155,15 +201,37 @@ export const projects: Project[] = [
     coverImage: "/projects/cheffe.jpg",
   },
   {
-    slug: "flysquid",
-    title: "Flysquid",
-    url: "https://flysquid.com/",
+    slug: "simply-spotless",
+    title: "Simply Spotless",
+    url: "https://www.simplyspotlessusa.com/",
     category: "website",
     description:
-      "A sharp creative agency presence built around motion, type, and a refined visual system.",
+      "A lead-generation website for a Central Texas cleaning company specialising in pre-commissioning cleaning for data centers, with quote requests and booking.",
     tech: ["WordPress", "Custom Theme"],
     tags: ["Corporate"],
-    coverImage: "/projects/FLYSQUID-FINAL-LOGO-02-scaled.png",
+    coverImage: "/projects/simply.webp",
+  },
+  {
+    slug: "shape-n-glow",
+    title: "Shape n Glow",
+    url: "https://shape-n-glow.vercel.app/",
+    category: "website",
+    description:
+      "A website for a Lebanese physiotherapy and wellness center offering EMS training, body sculpting, maderotherapy, pressotherapy and physical therapy.",
+    tech: ["React", "Tailwind CSS"],
+    tags: ["Health & Wellness"],
+    coverImage: "/projects/shapenglow.jpg",
+  },
+  {
+    slug: "palestra-fitness-club",
+    title: "Palestra Fitness Club",
+    url: "https://www.palestralb.com/",
+    category: "website",
+    description:
+      "A website for a semi-private fitness studio in Jdeideh, Lebanon, where small groups of up to four train with a dedicated coach.",
+    tech: ["React", "Tailwind CSS"],
+    tags: ["Sports & Fitness"],
+    coverImage: "/projects/palestra.jpeg",
   },
   {
     slug: "echahwan-tools",
@@ -188,6 +256,28 @@ export const projects: Project[] = [
     coverImage: "/projects/zephyr.jpg",
   },
   {
+    slug: "sync-sports",
+    title: "Sync Sports",
+    url: "https://syncsports.ae/",
+    category: "website",
+    description:
+      "A community website for SYNC Sports, a Dubai padel community running social games, tournaments, leagues and women-only SYNC Her sessions.",
+    tech: ["WordPress", "Elementor"],
+    tags: ["Sports & Fitness"],
+    coverImage: "/projects/syncsports.avif",
+  },
+  {
+    slug: "ora-sports-academy",
+    title: "Ora Sports Academy",
+    url: "https://orasportsacademy.com/",
+    category: "website",
+    description:
+      "A football academy website for boys and girls aged 4 to 18 in Dubai, with age-based programmes, holiday camps, venues and online registration.",
+    tech: ["WordPress", "Elementor"],
+    tags: ["Sports & Fitness", "Kids"],
+    coverImage: "/projects/ora.webp",
+  },
+  {
     slug: "freya-jewelry",
     title: "Freya Jewelry",
     url: "https://freyajwlry.com/",
@@ -197,6 +287,17 @@ export const projects: Project[] = [
     tech: ["Shopify", "Custom Theme"],
     tags: ["eCommerce"],
     coverImage: "/projects/freya.webp",
+  },
+  {
+    slug: "barkey-dog-care",
+    title: "Barkey Dog Care",
+    url: "https://barkeydogcare.com/",
+    category: "website",
+    description:
+      "A Lebanese online store for science-backed dog grooming products, toys and accessories, with cash on delivery across Lebanon.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/barkey.webp",
   },
   {
     slug: "shop-die-cast-lab",
@@ -252,6 +353,39 @@ export const projects: Project[] = [
     tech: ["Shopify", "Custom Theme"],
     tags: ["eCommerce", "Kids"],
     coverImage: "/projects/bare3.jpg",
+  },
+  {
+    slug: "karam-designs",
+    title: "Karam Designs",
+    url: "https://karamdesigns.com/",
+    category: "website",
+    description:
+      "A UAE football jersey store selling club, national, retro and kids' kits, with custom name and number printing and cash on delivery.",
+    tech: ["Shopify", "Custom Theme"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/karam.webp",
+  },
+  {
+    slug: "il-mushtarayat",
+    title: "IL Mushtarayat",
+    url: "https://ilmushtrayat.com/",
+    category: "website",
+    description:
+      "A bilingual Arabic and English store for a Riyadh apparel and lifestyle brand, organised around themed collections and collaborations.",
+    tech: ["Shopify", "Custom Theme", "i18n"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/mushtarayat.webp",
+  },
+  {
+    slug: "taffeta-boutique",
+    title: "Taffeta Boutique",
+    url: "https://taffetaboutique.com/",
+    category: "website",
+    description:
+      "An online store for a Beirut women's fashion boutique, selling dresses, suits, sets and accessories with delivery across Lebanon.",
+    tech: ["WordPress", "WooCommerce"],
+    tags: ["eCommerce"],
+    coverImage: "/projects/taffeta.webp",
   },
   {
     slug: "lawenme",

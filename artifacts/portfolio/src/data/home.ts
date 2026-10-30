@@ -1,5 +1,5 @@
 export const STATS = [
-  { value: "40+", label: "Projects Shipped" },
+  { value: "50+", label: "Projects Shipped" },
   { value: "5+", label: "Years Building" },
   { value: "17", label: "Countries Reached" },
 ];
