@@ -6,54 +6,22 @@ import { ArrowRight, Globe, Smartphone, Palette, Download } from "lucide-react";
 import { projects } from "@/data/projects";
 import { TechStack } from "@/components/TechStack";
 
-const STATS = [
-  { value: '40+', label: 'Projects Shipped' },
-  { value: '5+', label: 'Years Building' },
-  { value: '12+', label: 'Countries Reached' },
+import { STATS, SERVICES as SERVICE_TEXT } from "@/data/home";
+
+const SERVICE_STYLE = [
+  { Icon: Globe, accent: 'from-primary/20 to-transparent', border: 'hover:border-primary/50', glow: 'rgba(0,240,255,0.15)' },
+  { Icon: Smartphone, accent: 'from-secondary/20 to-transparent', border: 'hover:border-secondary/50', glow: 'rgba(180,0,255,0.12)' },
+  { Icon: Palette, accent: 'from-white/10 to-transparent', border: 'hover:border-white/30', glow: 'rgba(255,255,255,0.08)' },
 ];
 
-const SERVICES = [
-  {
-    Icon: Globe,
-    title: 'Websites',
-    description:
-      'High-performance, scalable web platforms engineered for speed, SEO, and seamless user journeys from corporate flagships to eCommerce systems.',
-    tags: ['Next.js', 'React.js', 'Angular', 'WordPress', 'Shopify', 'Headless CMS'],
-    accent: 'from-primary/20 to-transparent',
-    border: 'hover:border-primary/50',
-    glow: 'rgba(0,240,255,0.15)',
-  },
-  {
-    Icon: Smartphone,
-    title: 'Mobile Applications',
-    description:
-      'Cross-platform native experiences built for iOS and Android. Fluid interfaces, real-time data, and device-native interactions that feel right.',
-    tags: ['React Native', 'Flutter', 'Expo', 'iOS', 'Android'],
-    accent: 'from-secondary/20 to-transparent',
-    border: 'hover:border-secondary/50',
-    glow: 'rgba(180,0,255,0.12)', 
-  },
-  {
-    Icon: Palette,
-    title: 'UX / UI Design',
-    description:
-      'Research-led design systems and interfaces that align business goals with user needs from wireframes and prototypes to production-ready components.',
-    tags: ['Figma', 'Design Systems', 'Prototyping', 'User Research'],
-    accent: 'from-white/10 to-transparent',
-    border: 'hover:border-white/30',
-    glow: 'rgba(255,255,255,0.08)',
-  },
-];
+const SERVICES = SERVICE_TEXT.map((s, i) => ({ ...s, ...SERVICE_STYLE[i % SERVICE_STYLE.length] }));
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
 
   return (
     <>
-      <SEO 
-        title="Roy Youssef - Software Engineer" 
-        description="Portfolio of Roy Youssef, a Software Engineer based in Beirut, Lebanon specializing in high-performance web applications."
-      />
+      <SEO page="home" />
       
       <div className="container mx-auto px-6">
         <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-8 md:pt-0">
@@ -88,10 +56,21 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.14 }}
-                className="text-2xl md:text-4xl font-bold tracking-tight mb-10 leading-tight text-muted-foreground/70"
+                className="text-2xl md:text-4xl font-bold tracking-tight mb-6 leading-tight text-muted-foreground/70"
               >
                 Software <span className="text-gradient">Engineer</span> &amp; Digital Architect.
               </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-10"
+              >
+                Senior Full Stack Engineer based in Beirut, Lebanon. I build fast, SEO-friendly websites and web apps
+                with React, Next.js, Angular, TypeScript and Go, from government portals like the Riyadh Municipality
+                website to eCommerce for Red Bull Mobile.
+              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -151,7 +130,10 @@ export default function Home() {
               >
                 <img
                   src="/roy_compressed.png"
-                  alt="Roy Youssef"
+                  alt="Portrait of Roy Youssef, Senior Full Stack Engineer"
+                  width={1122}
+                  height={1402}
+                  fetchPriority="high"
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 rounded-full"
@@ -248,8 +230,10 @@ export default function Home() {
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                   <img 
-                    src={project.coverImage} 
-                    alt={project.title} 
+                    src={project.coverImage}
+                    alt={`${project.title} website by Roy Youssef`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>

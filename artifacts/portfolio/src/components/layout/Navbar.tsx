@@ -28,7 +28,7 @@ export function Navbar() {
         <div className="w-24 hidden md:block" />
 
         {/* Centered pill nav */}
-        <nav
+        <nav aria-label="Main navigation"
           className={`pointer-events-auto absolute left-6 md:left-1/2 md:-translate-x-1/2 flex items-center gap-1 px-2 py-2 rounded-full border transition-all duration-300 ${
             scrolled
               ? "bg-background/70 backdrop-blur-xl border-white/10 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)]"
@@ -65,15 +65,15 @@ export function Navbar() {
 
         {/* Right — social icons */}
         <div className="pointer-events-auto flex items-center gap-4 w-full justify-end">
-          <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer me" aria-label="Roy Youssef on GitHub"
             className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="w-5 h-5" />
           </a>
-          <a href="https://linkedin.com/in/roy-youssef-097a47252" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/roy-youssef-097a47252" target="_blank" rel="noopener noreferrer me" aria-label="Roy Youssef on LinkedIn"
             className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="mailto:roy.b.youssef@gmail.com"
+          <a href="mailto:roy.b.youssef@gmail.com" aria-label="Email Roy Youssef"
             className="text-muted-foreground hover:text-primary transition-colors">
             <Mail className="w-5 h-5" />
           </a>

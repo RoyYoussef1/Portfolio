@@ -75,10 +75,7 @@ export default function Projects() {
 
   return (
     <>
-      <SEO
-        title="Projects | Roy Youssef"
-        description="A showcase of websites and applications engineered by Roy Youssef."
-      />
+      <SEO page="projects" />
 
       <div className="container mx-auto px-6 py-12 max-w-6xl">
         <motion.div
@@ -187,7 +184,9 @@ export default function Projects() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
                       <img
                         src={project.coverImage}
-                        alt={project.title}
+                        alt={`${project.title} website by Roy Youssef`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-background/80 backdrop-blur flex items-center justify-center border border-white/10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">

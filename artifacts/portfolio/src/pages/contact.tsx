@@ -57,10 +57,7 @@ export default function Contact() {
 
   return (
     <>
-      <SEO 
-        title="Contact | Roy Youssef" 
-        description="Get in touch with Roy Youssef for full-time roles or freelance projects."
-      />
+      <SEO page="contact" />
       
       <div className="container mx-auto px-6 py-12 max-w-6xl">
         <motion.div
@@ -116,10 +113,10 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 mt-10 pt-6 border-t border-white/10">
-                <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors">
+                <a href="https://github.com/RoyYoussef1" target="_blank" rel="noopener noreferrer me" aria-label="Roy Youssef on GitHub" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com/in/roy-youssef-097a47252" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors">
+                <a href="https://www.linkedin.com/in/roy-youssef-097a47252" target="_blank" rel="noopener noreferrer me" aria-label="Roy Youssef on LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>

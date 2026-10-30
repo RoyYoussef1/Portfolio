@@ -3,14 +3,12 @@ import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { skills, experience, education, languages } from "@/data/resume";
 import { Badge } from "@/components/ui/badge";
+import { FAQ, SITE } from "@/seo/site";
 
 export default function About() {
   return (
     <>
-      <SEO 
-        title="About | Roy Youssef" 
-        description="Experience, skills, and background of Roy Youssef, Software Engineer."
-      />
+      <SEO page="about" />
       
       <div className="container mx-auto px-6 py-12 max-w-5xl">
         <motion.div
@@ -35,6 +33,9 @@ export default function About() {
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 Driven Software Engineer combining deep technical skills in web technologies with a creative flair for problem-solving, dedicated to delivering exceptional results in dynamic team environments.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+                {SITE.summary}
               </p>
             </motion.section>
 
@@ -86,6 +87,32 @@ export default function About() {
                     <p className="text-primary font-mono text-sm mb-2">{edu.institution} — {edu.location}</p>
                     <p className="text-muted-foreground text-sm">{edu.period}</p>
                   </div>
+                ))}
+              </div>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              aria-labelledby="faq-heading"
+            >
+              <h2 id="faq-heading" className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                <span className="text-primary font-mono text-sm">06.</span> Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {FAQ.map(({ q, a }) => (
+                  <details
+                    key={q}
+                    className="group glass-panel rounded-xl border border-white/5 open:border-primary/30 transition-colors"
+                  >
+                    <summary className="cursor-pointer list-none p-5 flex items-center justify-between gap-4 font-semibold text-foreground">
+                      <h3 className="text-base">{q}</h3>
+                      <span className="text-primary font-mono transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="px-5 pb-5 -mt-1 text-muted-foreground leading-relaxed">{a}</p>
+                  </details>
                 ))}
               </div>
             </motion.section>
